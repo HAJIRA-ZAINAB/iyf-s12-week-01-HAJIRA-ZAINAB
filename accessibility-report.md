@@ -1,26 +1,46 @@
-# Accessibility Audit Report
+# Accessibility Report
+Name: Hajira Zainab
+Date: Oct 2026
+Repo: iyf-s12-week-01-HAJIRA-ZAINAB
 
-## Issues Found
-1. Images missing alt text
-2. Missing lang attribute on html tag
-3. Heading hierarchy incorrect (h1 to h3)
-4. Form inputs missing labels in contact.html
-5. Links using "click here"
+## What I Checked
+I checked my 4 pages: index.html, about.html, projects.html, contact.html
 
-## How I Fixed Them
-1. Added alt="Project 1 - Data Pipeline" etc to all 5 images in projects.html
-2. Added lang="en" to <html> tag on index.html, about.html, projects.html, contact.html
-3. Fixed headings to proper order h1 → h2 → h3
-4. Added <label for="name">, <label for="email"> in contact.html
-5. Changed link text to descriptive text like "About Me" instead of "click here"
+## Tools
+1. Lighthouse in Chrome (F12 > Lighthouse)
+2. WAVE tool
+3. I checked code myself
 
-## Tools Used
-- Chrome DevTools Lighthouse
-- WAVE Web Accessibility Tool
+## Problems I Found and Fixed
 
-## Final Scores
-- Accessibility: 100/100
-- Tested pages: index.html, about.html, projects.html, contact.html
+### 1. Images had no alt text
+Before: `<img src="...">`
+After: `<img src="https://placehold.co/400x300" alt="Hajira Zainab">`
+Why: Blind people need alt text to hear what image is.
 
-## Learnings
-Accessibility makes site usable for screen readers and better for SEO.
+### 2. No lang="en"
+Before: `<html>`
+After: `<html lang="en">`
+Why: Tells screen reader to speak English.
+
+### 3. Heading skipped
+Before: h1 then h3
+After: h1 -> h2 -> h3
+Why: Headings must be in order like stairs.
+
+### 4. Form had no labels
+Before: `<input placeholder="name">`
+After: `<label for="name">Full Name</label><input id="name">`
+Why: Everyone needs label to know what to type.
+
+### 5. Link text was "click here"
+Before: `<a>click here</a>`
+After: `<a>About Me</a>` and `<a>My GitHub</a>`
+Why: Link must say where it goes.
+
+## Final Score
+Lighthouse Accessibility Score: 100/100
+All 4 pages pass.
+
+## What I Learned
+Accessibility helps blind people use my site and helps Google rank my site better.
